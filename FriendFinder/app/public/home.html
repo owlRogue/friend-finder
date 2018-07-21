@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,600,700">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+
+
+<style>
+    body {
+    width: auto;
+    background-color: lightgray;
+    font-family: "Josefin Sans";
+  }
+  .navbar {
+    height: 40px;
+    border-radius: 0px;
+    background-color: rgb(37, 35, 35);
+    opacity: 1;
+    border: none;
+    width: auto;
+    margin-top: 0px;
+    min-width: 600px;
+    font-weight: 200;
+    font-size: 17px;
+    color: aliceblue;
+  }
+  #wrapper {
+    padding-top: 20px;
+  }
+  #return-panel.row {
+    height: 400px;
+    width: auto;
+    margin: 0px;
+    background-color: rgb(51, 49, 58);
+    padding: 30px;
+  }
+  #input-panel.row {
+    height: auto;
+    width: 100%;
+    margin: 0px;
+  }
+  .col-md-4 {
+    position: relative;
+    padding: 15px;
+    margin: 5px;
+    min-width: 200px;
+    min-height: 200px;
+    color: lightgray;
+    background-color: rgb(147, 153, 173);
+  }
+  #codes {
+    display: inline-block;
+    overflow: auto;
+    width: auto;
+    height: auto;
+  }
+  #notes {
+    width: auto;
+  }
+  table,
+  th,
+  tr,
+  td {
+    border-color: black;
+    border-style: dotted;
+    border-width: 0.5px;
+    width: auto;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    color: lightslategray;
+  }
+  th {
+    font-weight: 400;
+  }
+  td {
+    font-weight: 200;
+  }
+
+  button {
+    height: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 15px;
+    border-style: none;
+    border: 0px;
+    background-color: lightgray;
+  }
+
+
+  textarea,
+  input {
+    display: block;
+    width: 90%;
+    background-color: lightgray;
+  }
+  input {
+    height: 36px;
+    font-size: 24px;
+  }
+  textarea {
+    height: 200px;
+    font-size: 18px;
+  }
+  </style>
+
+<body>
+
+  <nav class="navbar navbar-dark" id="nav">Amici Search
+    <!-- <div id="time-left"></div> -->
+    <button class="nav-button">
+      <a href="/survey">
+        <h4>Begin Survey</h4>
+      </a>
+    </button>
+    <div id="buttons">
+      <button class="nav-button">
+        <a href="/api/friends">API Friends List</a>
+      </button>
+      <button>
+        <a href="https://github.com/owlRogue/FriendFinder">GitHub Repo</a>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+
+  </div>
+
+  <div class="row" id="return-panel">
+      <table id="results">
+          <thead>
+            <tr>
+              <th id="code-id">id</th>
+              <th id="code-title">title</th>
+              <th id="code-description">description</th>
+              <th id="code-note">note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Results from DB here -->
+          </tbody>
+        </table>
+  </div>
+  <div class="row" id="input-panel">
+      <a name="datapanel"></a>
+
+      <div class="col-md-4" id="codes">
+          <!-- <form id="form" class="textarea"> THIS IS BEING BUILT BY JQUERY -->
+      </div>
+
+      <div class="col-md-4" id="notes">
+          <div id="area" class="textarea"></div>
+      </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
